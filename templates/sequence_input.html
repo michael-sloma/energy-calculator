@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<body>
+    <h1>Energy calculator</h1>
+	Enter a sequence and structure in dot-bracket format.<br>
+	<br>
+	Examples:<br>
+	<br>
+	hairpin loop<br>
+	<tt>GCGCAAAGCGC</tt><br>
+	<tt>((((...))))</tt><br>
+	<br>
+	duplex (seperate the two oligonucleotides with ampersand)<br>
+	<tt>GCGC&amp;GCGC</tt><br>
+	<tt>((((&amp;))))</tt><br>
+	<br>
+	Energy for the structure will be calculated<br>
+	<br>
+    <form action="." method="POST">
+		sequence
+		<br>
+		<input type="text" size="100" value="{{sequence}}" name="sequence" style="font-family:monospace;">
+		<br>
+		structure
+		<br>
+		<input type="text" size="100" value="{{structure}}" name="structure" style="font-family:monospace;">
+        <input type="submit" name="my-form" value="Send">
+    </form>
+	{{ energy }}<br>
+	<font color="red"> {{ error }} </font>
+</body>
+</html>
