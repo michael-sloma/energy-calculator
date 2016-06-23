@@ -7,11 +7,11 @@ app = Flask(__name__)
 app.config['DEBUG'] = False
 
 @app.route('/')
-def my_form():
+def stem_energy_get():
     return render_template("sequence_input.html")
 
 @app.route('/', methods=['POST'])
-def my_form_post():
+def stem_energy_post():
     sequence = request.form['sequence']
     structure = request.form['structure']
     try:

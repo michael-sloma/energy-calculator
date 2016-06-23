@@ -64,7 +64,5 @@ def duplex_energy(seq,db):
     for i,j in intermolecular_pairs:
         r.SpecifyPair(i+1, j+len(seq1)+1+3)
 
-    #    r.WriteCt("debug.ct")
     return r.CalculateFreeEnergy(UseSimpleMBLoopRules=True)
 
-#print duplex_energy("GCGCGCAAAGC&GCAAAGCGCGC","((((((...))&((...))))))")
